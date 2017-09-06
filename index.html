@@ -2,18 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Common Metadata Combine</title>
+    <link href="https://cdn.earthdata.nasa.gov/eui/1.1.3/stylesheets/application.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.earthdata.nasa.gov/eui/1.1.3/js/eui.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <!-- <webview id="urs-login" src="https://urs.earthdata.nasa.gov" style="display:inline-flex; width:1040px; height:720px;"></webview> -->
+    <input placeholder="Earthdata Username" type="text" id="urs-username"></input>
+    <input placeholder="Earthdata Password" type="password" id="urs-password"></input>
+    <input type="submit" onsubmit=""="urs.submit()" id="urs-submit"></input>
+    <div id="login"></div>
   </body>
 
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
+  <script src="urs.js"></script>
 </html>
