@@ -1,0 +1,60 @@
+header {
+  background: rgb(34, 118, 172);
+  height: 85px;
+  width: 100%;
+  margin-top: 0;
+}
+
+header h3 {
+  display: inline-block;
+}
+
+#search-bar {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+#evironment-radio {
+  display: inline-block;
+  margin-left: 25px;
+  text-align: center;
+}
+
+.env-selector {
+  padding: 1em 0 1em 0;
+  background-color: #1a5981;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  width: 25%;
+  margin: 0 -1.5px -13px -1.5px;
+}
+
+.env-selector:hover {
+  background-color: #1d6492;
+}
+
+.env-selector.left-end {
+  border-top-left-radius: 5px;
+}
+
+.env-selector.right-end {
+  border-top-right-radius: 5px;
+}
+
+#environment-radio input[type='radio'] {
+  display: none;
+  float: left;
+}
+
+#environment-radio input[type='radio']:checked + label {
+  background-color: #393939;
+  color: white;
+}
+
+#custom-conditions {
+  display: none;
+  text-align: center;
+  width: 400px;
+  margin: 1.5em auto 0 auto;
+}
