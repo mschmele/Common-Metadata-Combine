@@ -7,14 +7,17 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdn.earthdata.nasa.gov/eui/1.1.3/js/eui.js"></script>
+    <script src="urs.js"></script>
   </head>
   <body>
     <!-- <webview id="urs-login" src="https://urs.earthdata.nasa.gov" style="display:inline-flex; width:1040px; height:720px;"></webview> -->
-    <input placeholder="Earthdata Username" type="text" id="urs-username"></input>
-    <input placeholder="Earthdata Password" type="password" id="urs-password"></input>
-    <input type="submit" onsubmit=""="urs.submit()" id="urs-submit"></input>
+    <form id="urs-login">
+      <input placeholder="Earthdata Username" type="text" id="urs-username"></input>
+      <input placeholder="Earthdata Password" type="password" id="urs-password"></input>
+      <input type="submit" id="urs-submit"></input>
+    </form>
     <div id="login"></div>
   </body>
 
-  <script src="urs.js"></script>
+  <script>urs.init()</script>
 </html>
