@@ -1,0 +1,12 @@
+https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A2017232.L3b_DAY_CHL.nc
+https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A2017231.L3b_DAY_CHL.nc
+https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A2017230.L3b_DAY_CHL.nc
+https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A2017229.L3b_DAY_CHL.nc
+https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A2017228.L3b_DAY_CHL.nc
+https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A2017227.L3b_DAY_CHL.nc
+https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A2017226.L3b_DAY_CHL.nc
+https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A2017225.L3b_DAY_CHL.nc
+https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A20172252017232.L3b_8D_CHL.nc
+https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A2017224.L3b_DAY_CHL.nc
+https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A2017223.L3b_DAY_CHL.nc
+https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/A2017222.L3b_DAY_CHL.nc

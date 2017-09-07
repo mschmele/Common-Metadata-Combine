@@ -18,7 +18,7 @@
         <h3><a href="#">DATA ZONE</a></h3>
 
         <div id="search-bar">
-          <input class="eui-search-home" type="search" placeholder="Search for your data" style="padding:12px">
+          <input class="eui-search-home" type="search" placeholder="CMR Data Downloader" style="padding:12px">
           <button type="button" class="btn btn-green eui-search-home"><i class="eui-icon eui-fa-search"></i></button>
         </div>
 
@@ -29,14 +29,17 @@
           <input id="env-radio-uat" name="env-selector" type="radio" value="UAT">
           <label for="env-radio-uat">UAT</label>
 
-          <input id="env-radio-prod" name="env-selector" type="radio" value="PROD">
+          <input id="env-radio-prod" name="env-selector" type="radio" value="PROD" checked="checked">
           <label for="env-radio-prod">PROD</label>
         </div>
       </div>
-
-
     </header>
-  </body>
 
-  <script>urs.init()</script>
+    <section id="link-harvester">
+      <input id="harvest-path" type="text" placeholder="Path to save. ~/EOSDIS_Harvest is default"></input>
+      <input id="open-file" type="file"></input>
+      <button id="big-red-button" type="button">DOWNLOAD!</button>
+    </section>
+    <script>search.init()</script>
+  </body>
 </html>

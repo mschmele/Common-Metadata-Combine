@@ -12,6 +12,7 @@ header h3 {
 #search-bar {
   display: inline-block;
   margin-top: 10px;
+  margin-left: 25px;
 }
 
 #evironment-radio {
