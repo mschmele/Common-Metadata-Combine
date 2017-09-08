@@ -4,6 +4,7 @@ search = {
   prod: "http://cmr.earthdata.nasa.gov",
 
   init: function() {
+
     $('#search-bar .btn').on('click', function(event) {
       search.forMyData(event.delegateTarget.previousElementSibling.value)
     })
@@ -28,18 +29,17 @@ search = {
 
   downloadItAll: function(files) {
     files.forEach(function callback(currentValue, index, array) {
-      debugger
-      search.downloadData(currentValue currentValue.split("\/").pop())
+      search.downloadData(currentValue, currentValue.split("\/").pop())
     })
   },
 
   downloadData: function(uri, name) {
-    var link = document.createElement("a");
-    link.download = name;
-    link.href = uri;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    delete link;
+    var link = document.createElement("a")
+    link.download = name
+    link.href = uri
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    delete link
   }
 }
