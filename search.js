@@ -1,7 +1,7 @@
 search = {
-  sit: "http://cmr.sit.earthdata.nasa.gov/search/",
-  uat: "http://cmr.uat.earthdata.nasa.gov/search/",
-  prod: "http://cmr.earthdata.nasa.gov/search/",
+  sit: "http://cmr.sit.earthdata.nasa.gov/search/collections?downloadable=true&",
+  uat: "http://cmr.uat.earthdata.nasa.gov/search/collections?downloadable=true&",
+  prod: "http://cmr.earthdata.nasa.gov/search/collections?downloadable=true&",
 
   init: function() {
 
@@ -23,8 +23,15 @@ search = {
   },
 
   forMyData: function(params) {
-    $.get({url: search[$('input[name=env-selector]:checked').val().toLowerCase()] || prodUrl + params,
-           crossDomain: true})
+    $.get({url: search[$('input[name=env-selector]:checked').val().toLowerCase()] + params,
+           data: "Accept: application/json"},
+          function(data) {
+            debugger
+            Mustache.parse(search.resultRowTemplate)
+            var render = Mustache.render(search.resultRowTemplate, {collectionUrl: "Luke", content: ""})
+
+            $('.eui-accordion__body tbody').html()
+          })
   },
 
   downloadItAll: function(files) {
@@ -42,5 +49,5 @@ search = {
     document.body.removeChild(link)
     delete link
   },
-  resultRowTemplate: "<tr><td>{{content}}</td></tr>"
+  resultRowTemplate: "<tr><td data-url='{{collectionUrl}}'>{{content}}</td></tr>"
 }
