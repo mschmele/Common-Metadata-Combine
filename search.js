@@ -1,7 +1,7 @@
 search = {
-  sit: "http://cmr.sit.earthdata.nasa.gov",
-  uat: "http://cmr.uat.earthdata.nasa.gov",
-  prod: "http://cmr.earthdata.nasa.gov",
+  sit: "http://cmr.sit.earthdata.nasa.gov/search/",
+  uat: "http://cmr.uat.earthdata.nasa.gov/search/",
+  prod: "http://cmr.earthdata.nasa.gov/search/",
 
   init: function() {
 
@@ -41,5 +41,6 @@ search = {
     link.click()
     document.body.removeChild(link)
     delete link
-  }
+  },
+  resultRowTemplate: "<tr><td>{{content}}</td></tr>"
 }

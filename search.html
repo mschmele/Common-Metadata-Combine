@@ -9,6 +9,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdn.earthdata.nasa.gov/eui/1.1.3/js/eui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
     <script src="search.js"></script>
     <script src="urs.js"></script>
   </head>
@@ -34,9 +35,32 @@
         </div>
       </div>
     </header>
+    <section id="cmr-search-results">
+      <div class="eui-accordion">
+        <div class="eui-accordion__header">
+          <h2 class="eui-accordion__title">CMR Search Results</h2>
+          <div class="eui-accordion__icon" tabindex="0">
+            <i class="eui-icon eui-fa-chevron-circle-down"></i>
+            <span class="eui-sr-only">Show/Hide Results</span>
+          </div>
+        </div>
+        <div class="eui-accordion__body">
+          <table>
+            <thead>
+              <tr>
+                <th>Concept ID - Data URL</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
     <section id="link-harvester">
-      <input id="harvest-path" type="text" placeholder="Path to save. ~/Downloads is default"></input>
+      <h2>Here Be The Link Harvester</h2>
+      <h4>Simply upload a text file with links to data separated by new lines, click download, and voila!</h4>
       <input id="open-file" type="file"></input>
       <button id="big-red-button" type="button">DOWNLOAD!</button>
     </section>

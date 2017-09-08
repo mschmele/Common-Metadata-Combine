@@ -12,7 +12,21 @@ header h3 {
 #search-bar {
   display: inline-block;
   margin-top: 10px;
-  margin-left: 25px;
+  margin-left: 25%;
+}
+
+#cmr-search-results {
+  box-shadow: 0px 3px 5px 1px rgba(0,0,0,.14);
+}
+
+#link-harvester {
+  text-align: center;
+  margin-top: 50px;
+}
+
+td:hover {
+  background-color: rgba(203, 203, 203, 0.29);
+  cursor: pointer;
 }
 
 #evironment-radio {
