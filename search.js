@@ -1,7 +1,7 @@
 search = {
-  sit: "http://cmr.sit.earthdata.nasa.gov/search/collections?downloadable=true&",
-  uat: "http://cmr.uat.earthdata.nasa.gov/search/collections?downloadable=true&",
-  prod: "http://cmr.earthdata.nasa.gov/search/collections?downloadable=true&",
+  sit: "https://cmr.sit.earthdata.nasa.gov/search/collections?downloadable=true&",
+  uat: "https://cmr.uat.earthdata.nasa.gov/search/collections?downloadable=true&",
+  prod: "https://cmr.earthdata.nasa.gov/search/collections?downloadable=true&",
 
   init: function() {
 
