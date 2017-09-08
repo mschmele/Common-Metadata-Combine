@@ -20,17 +20,28 @@ search = {
 
       reader.readAsBinaryString(selectedFile)
     })
+
+    $('.eui-accordion__body table tbody').on('click', function(event) {
+      search.downloadData(event.target.getAttribute('data-url'), $(event.target).val())
+    })
   },
 
   forMyData: function(params) {
     $.get({url: search[$('input[name=env-selector]:checked').val().toLowerCase()] + params,
-           data: "Accept: application/json"},
+           beforeSend: function(xhr){xhr.setRequestHeader('Accept', 'application/vnd.nasa.cmr.umm_results+json');}},
           function(data) {
-            debugger
-            Mustache.parse(search.resultRowTemplate)
-            var render = Mustache.render(search.resultRowTemplate, {collectionUrl: "Luke", content: ""})
+            var downloadLinks = data.items.map(function(item) {
+              return item.umm.RelatedUrls.filter(function(url) { return url.Type == "GET DATA" })
+            })
+            var flatLinks = [].concat.apply([], downloadLinks)
 
-            $('.eui-accordion__body tbody').html()
+            var renderdata = flatLinks.map(function(link) {
+                                return {collectionUrl: link.URL, content: link.Description}
+                              })
+            Mustache.parse(search.resultRowTemplate)
+            var render = Mustache.render(search.resultRowTemplate, {datarow: renderdata})
+
+            $('.eui-accordion__body tbody').html(render)
           })
   },
 
@@ -49,5 +60,5 @@ search = {
     document.body.removeChild(link)
     delete link
   },
-  resultRowTemplate: "<tr><td data-url='{{collectionUrl}}'>{{content}}</td></tr>"
+  resultRowTemplate: "{{#datarow}}<tr class='data-download'><td data-url='{{collectionUrl}}'>{{content}}</td></tr>{{/datarow}}"
 }
